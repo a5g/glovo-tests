@@ -1,0 +1,15 @@
+{
+  "name": "glovo-ui-tests",
+  "script": {
+    "test": "jest __tests__/city.test.ts",
+    "report": "allure serve"
+  },
+  "dependencies": {
+    "@types/jest": "^26.0.13",
+    "@types/puppeteer": "^3.0.2",
+    "jest": "^26.4.2",
+    "jest-puppeteer": "^4.4.0",
+    "puppeteer": "^5.2.1",
+    "ts-jest": "^26.3.0"
+  }
+}
