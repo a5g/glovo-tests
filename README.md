@@ -1,6 +1,6 @@
 # ui-tests-assignment
 
-Automated UI tests for Glovo requirement
+Automated UI tests
 
 # Prerequisites
 
