@@ -72,7 +72,7 @@ describe("verify city of origin", () => {
   });
 
   data.map((employee) => {
-    test("check Andrew", async () => {
+    test(`check ${employee.name}`, async () => {
       await selectEmployee(employee.index);
       await clickButton();
 
@@ -81,7 +81,7 @@ describe("verify city of origin", () => {
       expect(finalText).toEqual(`${employee.name} is from ${employee.city}`);
     });
 
-    test("uncheck Andrew", async () => {
+    test(`uncheck ${employee.name}`, async () => {
       await deselectEmployee(employee.index);
       await clickButton();
     });
@@ -104,7 +104,7 @@ describe("verify city of origin === failing tests", () => {
   });
 
   data.map((employee) => {
-    test("check Andrew", async () => {
+    test(`check ${employee.name}`, async () => {
       await selectEmployee(employee.index);
       await clickButton();
 
@@ -115,7 +115,7 @@ describe("verify city of origin === failing tests", () => {
       );
     });
 
-    test("uncheck Andrew", async () => {
+   test(`uncheck ${employee.name}`, async () => {
       await deselectEmployee(employee.index);
       await clickButton();
     });
