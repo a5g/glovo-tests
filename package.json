@@ -1,5 +1,5 @@
 {
-  "name": "glovo-ui-tests",
+  "name": "ui-test-assignment",
   "script": {
     "test": "jest __tests__/city.test.ts",
     "report": "allure serve"
