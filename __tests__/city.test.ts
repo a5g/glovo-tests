@@ -1,21 +1,9 @@
-// locators
-// span.jqx-tree-grid-checkbox - checkbox  -- when selected => div is rendered
-
-// row0treeGrid === dynamic part is 0.
-
-// import locators from "../locators";
 const locators = require("../locators");
 const data = require("../data");
 
 const timeout = 0;
 jest.setTimeout(60000);
-
-// const locators = {
-//   checkbox:
-//     "table#tabletreeGrid tbody tr#row__index__treeGrid td span.jqx-tree-grid-checkbox",
-//   listBox: "div#listBoxSelected span",
-//   button: "button#btn",
-// };
+const baseURL = ''
 
 let deselectEmployee = async (index) => {
   // we must find if the checkbox is selected
@@ -50,10 +38,6 @@ let getListBoxText = async () => {
   }, listbox);
 
   return txt;
-
-  // return page.evaluate((list) => {
-  //   return list.textContent;
-  // }, listbox);
 };
 
 describe("verify city of origin", () => {
@@ -64,9 +48,7 @@ describe("verify city of origin", () => {
   });
 
   test("navigate to site", async () => {
-    await page.goto(
-      "file:///Users/anandganesh/anand/dev-cloud/glovo/ui-test-assessment/employees.html"
-    );
+    await page.goto(baseURL);
 
     await page.waitFor(100);
   });
@@ -96,9 +78,7 @@ describe("verify city of origin === failing tests", () => {
   });
 
   test("navigate to site", async () => {
-    await page.goto(
-      "file:///Users/anandganesh/anand/dev-cloud/glovo/ui-test-assessment/employees.html"
-    );
+    await page.goto(baseURL);
 
     await page.waitFor(100);
   });
